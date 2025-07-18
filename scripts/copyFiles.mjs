@@ -75,6 +75,7 @@ async function run() {
       [
         'changelog.md',
         'README.md',
+        '.npmrc',
       ].map((file) => includeFileInBuild(file)),
     );
     await createModulePackages({ from: srcPath, to: buildPath });
