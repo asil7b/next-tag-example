@@ -14,8 +14,8 @@ Install the package in your project directory with:
 
 ```bash
 # with npm
-npm install @asil7b/next-tag-example
+npm install next-tag-example
 
 # with yarn
-yarn add @asil7b/next-tag-example
+yarn add next-tag-example
 ```
