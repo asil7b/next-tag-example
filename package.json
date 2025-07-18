@@ -11,6 +11,7 @@
     "build:stable": "swc --copy-files --out-dir dist --ignore **/*.test.js,**/*.test.jsx,**/*.snap src --strip-leading-paths",
     "build:copy-files": "node ./scripts/copyFiles.mjs",
     "build": "npm run build:cjs && npm run build:stable && npm run build:copy-files",
+    "lint": "eslint",
     "test": "jest --watch",
     "test:all": "jest --ci --all --watchAll=false",
     "cover:jest": "jest --ci --watchAll=false --coverage --coverageDirectory=coverage",
@@ -27,9 +28,12 @@
     "react-dom": "^19.1.0"
   },
   "dependencies": {
-    "@swc/helpers": "^0.5.17"
+    "@swc/helpers": "^0.5.17",
+    "prop-types": "^15.8.1"
   },
   "devDependencies": {
+    "@eslint/js": "^9.31.0",
+    "@next/eslint-plugin-next": "^15.4.1",
     "@swc/cli": "^0.7.8",
     "@swc/core": "^1.13.0",
     "@swc/jest": "^0.2.39",
@@ -38,8 +42,16 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.5.2",
     "@types/jest": "^29.5.13",
+    "eslint": "^9.31.0",
+    "eslint-config-next": "^15.4.1",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jest-dom": "^5.5.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-testing-library": "^7.6.0",
     "fast-glob": "^3.3.3",
     "fs-extra": "^11.3.0",
+    "globals": "^16.3.0",
     "jest": "^30.0.4",
     "jest-environment-jsdom": "^30.0.4",
     "jest-watch-typeahead": "^3.0.1",
