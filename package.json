@@ -1,6 +1,6 @@
 {
   "name": "@asil7b/next-tag-example",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-canary.1",
   "author": "Asil, Inc.",
   "description": "A clickable keyword or phrase associated with a content",
   "main": "./src/index.js",
