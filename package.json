@@ -1,6 +1,6 @@
 {
   "name": "next-tag-example",
-  "version": "0.1.0-canary.2",
+  "version": "0.1.0-canary.1",
   "author": "Asil, Inc.",
   "description": "A clickable keyword or phrase associated with a content",
   "license": "MIT",
@@ -56,7 +56,7 @@
     "jest": "^30.0.4",
     "jest-environment-jsdom": "^30.0.4",
     "jest-watch-typeahead": "^3.0.1",
-    "next": "^15.4.2-canary.7",
+    "next": "^15.4.2-canary",
     "react": "^19.1.0",
     "react-app-polyfill": "^3.0.0",
     "react-dom": "^19.1.0",
