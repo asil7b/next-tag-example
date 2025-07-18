@@ -5,6 +5,12 @@
   "description": "A clickable keyword or phrase associated with a content",
   "main": "./src/index.js",
   "scripts": {
+    "clean": "rimraf coverage dist",
+    "prebuild": "rimraf dist",
+    "build:cjs": "swc --copy-files --config-file .cjs.swcrc --no-swcrc --out-dir dist/cjs --ignore **/*.test.js,**/*.test.jsx,**/*.snap src --strip-leading-paths",
+    "build:stable": "swc --copy-files --out-dir dist --ignore **/*.test.js,**/*.test.jsx,**/*.snap src --strip-leading-paths",
+    "build:copy-files": "node ./scripts/copyFiles.mjs",
+    "build": "npm run build:cjs && npm run build:stable && npm run build:copy-files"
   },
   "repository": {
     "type": "git",
@@ -17,11 +23,18 @@
     "react-dom": "^19.1.0"
   },
   "dependencies": {
+    "@swc/helpers": "^0.5.17"
   },
   "devDependencies": {
+    "@swc/cli": "^0.7.8",
+    "@swc/core": "^1.13.0",
+    "@swc/jest": "^0.2.39",
+    "fast-glob": "^3.3.3",
+    "fs-extra": "^11.3.0",
     "next": "^15.4.2-canary.7",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "rimraf": "^6.0.1"
   },
   "sideEffects": false,
   "engines": {
