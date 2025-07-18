@@ -74,7 +74,7 @@ async function run() {
     await Promise.all(
       [
         'changelog.md',
-        'readme.md',
+        'README.md',
       ].map((file) => includeFileInBuild(file)),
     );
     await createModulePackages({ from: srcPath, to: buildPath });
