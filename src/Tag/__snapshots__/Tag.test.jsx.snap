@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`<Tag /> Tag renders correctly 1`] = `
+<DocumentFragment>
+  <a
+    href="/tag/react"
+  >
+    react
+  </a>
+</DocumentFragment>
+`;
+
+exports[`<Tag /> Tag respects given props 1`] = `
+<DocumentFragment>
+  <a
+    href="/tag/react"
+    title="React Tag"
+  >
+    react
+  </a>
+</DocumentFragment>
+`;
